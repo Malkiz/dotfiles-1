@@ -7,6 +7,7 @@
 # version of Vim is to get +clipboard support, you'd still run terminal Vim.
 sudo apt-get update && sudo apt-get install -y \
   git \
+  gitk \
   python3-pip
 
 # Clone down this dotfiles repo to your home directory. Feel free to place
