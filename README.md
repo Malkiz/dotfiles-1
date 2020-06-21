@@ -8,7 +8,9 @@
 sudo apt-get update && sudo apt-get install -y \
   git \
   gitk \
-  python3-pip
+  python3-pip \
+  python3-venv \
+  python3-tk
 
 # Clone down this dotfiles repo to your home directory. Feel free to place
 # this anywhere you want, but remember where you've cloned things to.
