@@ -10,7 +10,10 @@ sudo apt-get update && sudo apt-get install -y \
   gitk \
   python3-pip \
   python3-venv \
-  python3-tk
+  python3-tk \
+  curl \
+  exuberant-ctags \
+  ack-grep
 
 # Clone down this dotfiles repo to your home directory. Feel free to place
 # this anywhere you want, but remember where you've cloned things to.
@@ -22,7 +25,7 @@ git clone git@github.com:Malkiz/dotfiles-1.git ~/dotfiles
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
 ln -s ~/dotfiles/.bashrc ~/.bashrc \
   && ln -s ~/dotfiles/.gitconfig ~/.gitconfig \
-  && ln -s ~/dotfiles/.vimrc ~/.vimrc \
+  && ln -s ~/dotfiles/.vimrc-fisadev ~/.vimrc \
   && sudo ln -s ~/dotfiles/etc/wsl.conf /etc/wsl.conf
 
 # Create your own personal ~/.gitconfig.user file. After copying the file,
@@ -31,6 +34,9 @@ cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
 
 # Install FZF (fuzzy finder on the terminal and used by a Vim plugin).
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+# Install Fisadev
+sudo pip3 install pynvim flake8 pylint isort
 ```
 
 Optionally confirm that a few things work after closing and re-opening your
