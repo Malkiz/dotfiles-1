@@ -56,7 +56,7 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 # WSL 2 specific settings.
 if uname --version | grep -q "8.30" &>/dev/null; then
     # Requires: https://sourceforge.net/projects/vcxsrv/ (or alternative)
-    export DISPLAY="$(/sbin/ip route | awk '/default/ { print $3 }'):0"
+    export DISPLAY="$(/sbin/ip route | awk '/default/ { print $4 }'):0"
 
 # WSL 1 specific settings.
 elif grep -qE "(Microsoft|WSL)" /proc/version &>/dev/null; then
