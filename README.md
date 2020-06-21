@@ -18,7 +18,12 @@ git clone git@github.com:Malkiz/dotfiles-1.git ~/dotfiles
 # then adjust the symlink source (left side) to where you cloned it.
 #
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
-ln -s ~/dotfiles/.bashrc ~/.bashrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc \
+  && ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+
+# Create your own personal ~/.gitconfig.user file. After copying the file,
+# you should edit it to have your name and email address so git can use it.
+cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
 ```
 
 Optionally confirm that a few things work after closing and re-opening your
