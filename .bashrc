@@ -54,13 +54,12 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 [ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
 
 # WSL 2 specific settings.
-if grep -q "microsoft" /proc/version &>/dev/null; then
+if uname --version | grep -q "8.30" &>/dev/null; then
     # Requires: https://sourceforge.net/projects/vcxsrv/ (or alternative)
     export DISPLAY="$(/sbin/ip route | awk '/default/ { print $3 }'):0"
-fi
 
 # WSL 1 specific settings.
-if grep -qE "(Microsoft|WSL)" /proc/version &>/dev/null; then
+elif grep -qE "(Microsoft|WSL)" /proc/version &>/dev/null; then
     if [ "$(umask)" = "0000" ]; then
         umask 0022
     fi
