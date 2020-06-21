@@ -25,6 +25,9 @@ ln -s ~/dotfiles/.bashrc ~/.bashrc \
 # Create your own personal ~/.gitconfig.user file. After copying the file,
 # you should edit it to have your name and email address so git can use it.
 cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
+
+# Install FZF (fuzzy finder on the terminal and used by a Vim plugin).
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ```
 
 Optionally confirm that a few things work after closing and re-opening your
