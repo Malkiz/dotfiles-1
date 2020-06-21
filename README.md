@@ -19,7 +19,8 @@ git clone git@github.com:Malkiz/dotfiles-1.git ~/dotfiles
 #
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
 ln -s ~/dotfiles/.bashrc ~/.bashrc \
-  && ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+  && ln -s ~/dotfiles/.gitconfig ~/.gitconfig \
+  && sudo ln -s ~/dotfiles/etc/wsl.conf /etc/wsl.conf
 
 # Create your own personal ~/.gitconfig.user file. After copying the file,
 # you should edit it to have your name and email address so git can use it.
