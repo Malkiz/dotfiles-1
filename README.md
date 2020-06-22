@@ -37,6 +37,10 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 # Install Fisadev
 sudo pip3 install pynvim flake8 pylint isort
+
+# vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 Optionally confirm that a few things work after closing and re-opening your
