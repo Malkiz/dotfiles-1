@@ -71,6 +71,10 @@ endif
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+" Vim HardTime
+Plug 'takac/vim-hardtime'
+let g:hardtime_default_on = 1
+
 Plug 'davidhalter/jedi-vim'
 
 " Initialize plugin system
