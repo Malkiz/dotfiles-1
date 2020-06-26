@@ -24,6 +24,7 @@ git clone git@github.com:Malkiz/dotfiles-1.git ~/dotfiles
 #
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
 ln -s ~/dotfiles/.bashrc ~/.bashrc \
+  && ln -s ~/dotfiles/.bash_profile ~/.bash_profile \
   && ln -s ~/dotfiles/.gitconfig ~/.gitconfig \
   && ln -s ~/dotfiles/.vimrc-example ~/.vimrc \
   && sudo ln -s ~/dotfiles/etc/wsl.conf /etc/wsl.conf
@@ -35,12 +36,12 @@ cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
 # Install FZF (fuzzy finder on the terminal and used by a Vim plugin).
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
-# Install Fisadev
-sudo pip3 install pynvim flake8 pylint isort
-
 # vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
 Optionally confirm that a few things work after closing and re-opening your

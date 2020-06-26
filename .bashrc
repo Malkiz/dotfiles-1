@@ -55,11 +55,15 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 
 # WSL 2 specific settings.
 if uname --version | grep -q "8.30" &>/dev/null; then
+    export WSL_VERSION=2
     # Requires: https://sourceforge.net/projects/vcxsrv/ (or alternative)
     export DISPLAY="$(/sbin/ip route | awk '/default/ { print $4 }'):0"
 
 # WSL 1 specific settings.
 elif grep -qE "(Microsoft|WSL)" /proc/version &>/dev/null; then
+	
+    export WSL_VERSION=1
+
     if [ "$(umask)" = "0000" ]; then
         umask 0022
     fi
@@ -89,3 +93,7 @@ elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
 fi
 
 unset env
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
