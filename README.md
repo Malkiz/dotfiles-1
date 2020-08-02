@@ -15,6 +15,9 @@ sudo apt-get update && sudo apt-get install -y \
   exuberant-ctags \
   ack-grep
 
+# https://vimawesome.com/plugin/vim-autoformat
+python3 -m pip install pynvim
+
 # Clone down this dotfiles repo to your home directory. Feel free to place
 # this anywhere you want, but remember where you've cloned things to.
 git clone git@github.com:Malkiz/dotfiles-1.git ~/dotfiles
