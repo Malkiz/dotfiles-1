@@ -37,6 +37,9 @@ ln -s ~/dotfiles/.bashrc ~/.bashrc \
 cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
 
 # Install FZF (fuzzy finder on the terminal and used by a Vim plugin).
+sudo add-apt-repository ppa:x4121/ripgrep
+sudo apt-get update
+sudo apt-get install ripgrep
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 # vim-plug
