@@ -56,6 +56,13 @@ endif
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
 
+" From https://stackoverflow.com/questions/13239464/create-a-new-file-in-the-directory-of-the-open-file-in-vim/13239757
+:set autochdir
+
+" mapping
+:map <C-f> :Files<Return>
+:map <C-j> cw<C-r>0<ESC>
+
 " From https://alvinalexander.com/linux/vi-vim-editor-color-scheme-colorscheme/
 colo peachpuff
 syntax on
@@ -80,7 +87,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 
 Plug 'chiel92/vim-autoformat'
 
